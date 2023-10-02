@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 const body = document.querySelector("body");
 const modeToggle = document.getElementById("mode-toggle");
 const modeStatus = document.querySelector(".mode-status");
@@ -17,53 +19,26 @@ function toggleMode() {
 
 modeToggle.addEventListener("click", toggleMode);
 
-//image slide
-// document.addEventListener("DOMContentLoaded", function() {
-//   const sliderContainer = document.getElementById('sliderimg');
-//   const images = document.querySelectorAll('.sliderimg img');
-//   const images = sliderContainer.querySelectorAll('img');
-//   const previousImage = document.getElementById("prev");
-//   const nextImage = document.getElementById("next");
+const items = document.querySelectorAll('.item:not(:first-child)');
+const options = {
+  threshold: 0.5,
+};
 
-//   let currentIndex = 0;
+function addSlideIn(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('slide-in');
+      console.log('Element is intersecting and sliding in:', entry.target);
+    }
+  });
+}
 
-//   function reset() {
-//     for (let i = 0; i < images.length; i++) {
-//       images[i].classList.remove('active');
-//     }
-//   }
+const observer = new IntersectionObserver(addSlideIn, options);
+items.forEach((item) => {
+  observer.observe(item);
+  console.log('Observing element:', item);
+});
 
-//   function initializeSlider() {
-//     reset();
-//     images[currentIndex].classList.add('active');
-//   }
 
-//   function slideLeft() {
-//     reset();
-//     currentIndex--;
-//     if (currentIndex < 0) {
-//       currentIndex = images.length - 1;
-//     }
-//     images[currentIndex].classList.add('active');
-//   }
 
-//   function slideRight() {
-//     reset();
-//     currentIndex++;
-//     if (currentIndex >= images.length) {
-//       currentIndex = 0;
-//     }
-//     images[currentIndex].classList.add('active');
-//   }
-
-//   initializeSlider();
-  
-
-//   previousImage.addEventListener('click', function() {
-//     slideLeft();
-//   });
-
-//   nextImage.addEventListener('click', function() {
-//     slideRight();
-//   });
-// });
+});
