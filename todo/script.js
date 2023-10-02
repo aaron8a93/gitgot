@@ -1,4 +1,3 @@
-// Write your code below
 // DOM Elements and Global Variables
 const addTaskBtn = document.getElementById('add-task');
 const input = document.querySelector('input');
