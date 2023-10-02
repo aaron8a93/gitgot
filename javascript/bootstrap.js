@@ -28,7 +28,7 @@ function addSlideIn(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('slide-in');
-      console.log('Element is intersecting and sliding in:', entry.target);
+      // console.log('Element is intersecting and sliding in:', entry.target);
     }
   });
 }
