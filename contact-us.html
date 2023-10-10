@@ -18,7 +18,7 @@
   <div class="logo">
   <img src="media\logo.png" style="width:100px;height:100px; display: block; margin: 0 auto;" alt="Coding Logo">
   </div>
-  <h1>Contact Us</h1>
+  <h1>Contact Me</h1>
   
   <p class="mode-status">Light Mode</p>
 
@@ -75,22 +75,21 @@
 
 <footer>
   <div class="box">
-       <form action="#">
-       <div class="form-box">
-        <h2>Subscribe and get updates from me!</h2>
-        <form action="your-newsletter-processing-script.php" method="POST">
-          <label for="name"><b>Name:</b></label>
-          <input type="text" id="name" name="name" required placeholder="Enter your name">
-          <br><br>
-          <label for="email"><b>Email:</b></label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email">
-          <br><br>
-          <button type="submit">Subscribe</button>
-        </form>
-       </div>
-      </div>
+    <form id="contact-form" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      
+      <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+  </form>
+
+  <div id="success-message" class="hidden">Form submitted successfully!</div>
+
       </footer>
 
-  <script src="javascript/bootstrap.js"></script>
+  <script src="javascript/contact.js"></script>
   </body>
 </html>
