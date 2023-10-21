@@ -42,3 +42,23 @@ items.forEach((item) => {
 
 
 });
+
+//quiz app
+$(document).ready(function() {
+  
+  // Disable all radio buttons when one is clicked
+  $('input[type=radio]').click(function() {
+     $('input[type=radio]').attr('disabled', true);
+     $(this).attr('disabled', false);
+   });
+  
+   // Check answer when submit button is clicked
+   $('#submit').click(function() {
+     var answer = $('input[name=q1]:checked').val();
+     if (answer == 'a') {
+       $('.feedback').html('<p class="correct">Correct!</p>');
+     } else {
+       $('.feedback').html('<p class="incorrect">Incorrect!</p>');
+     }
+   });
+});

@@ -169,6 +169,59 @@ input.invalid {
 
 /* SLIDE IN END */
 
+/* quiz css */
+.quiz {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.quiz h2 {
+  text-align: center;
+}
+#submit {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.options label {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.options label:hover {
+  background-color: #ccc;
+}
+
+.feedback {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+/* quiz css end */
+
 .dark-mode {
   background-color: #333;
   color: #f0f0f0;
