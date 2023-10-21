@@ -177,9 +177,11 @@ input.invalid {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
 .quiz h2 {
   text-align: center;
 }
+
 #submit {
   display: block;
   margin: auto;
@@ -193,18 +195,22 @@ input.invalid {
 
 .options label {
   display: block;
+  text-align: center;
   padding: 10px;
   margin: 5px;
   background-color: #e0e0e0;
+  position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-
 .options label:hover {
   background-color: #ccc;
 }
-
+.options input:checked + label {
+  background-color: #00f;
+  color: #00f;
+}
 .feedback {
   text-align: center;
   margin-top: 20px;
@@ -318,6 +324,15 @@ input:checked + .slider:before {
 
 .dark-mode footer {
   color: #444;
+}
+
+.dark-mode .quiz {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.dark-mode .options label {
+  color: #130909;
 }
 
 @media screen and (max-width: 600px) {
